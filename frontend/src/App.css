@@ -1,0 +1,19 @@
+*{
+
+scroll-behavior: smooth;
+margin: 0;
+
+
+}
+.menuBurger{
+    width: 50px !important;
+}
+.RedColor{
+    color: red !important;
+}
+.GreenColor{
+    color: green !important;
+}
+.MuiSwitch-root{
+    margin-top: -10px;
+}
