@@ -19,6 +19,7 @@ const connect=require("./datbase")
 
 connect()  //call this after dotenv required otherwise database file will not get url from env file
 
+
 exports.const=cloudinary.config({
     cloud_name: process.env.CLOUD_NAME,
     api_key: process.env.API_KEY,
