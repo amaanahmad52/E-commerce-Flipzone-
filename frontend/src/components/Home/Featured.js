@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactStars from "react-rating-stars-component";
 import { Link } from 'react-router-dom';
-import ParticularProduct from '../Product/ParticularProduct';
+// import ParticularProduct from '../Product/ParticularProduct';
 const Featured = ({product}) => {
     const options={
         count: 5,

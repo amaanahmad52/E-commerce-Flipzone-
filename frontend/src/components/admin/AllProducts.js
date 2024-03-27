@@ -11,7 +11,7 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import {toast} from 'react-toastify';
 import Sidebar from './Sidebar';
 import "./AllProducts.css"
-import ProductEdit from './ProductEdit';
+// import ProductEdit from './ProductEdit';
 const AllProducts = () => {
   
      const dispatch=useDispatch();
@@ -45,7 +45,7 @@ const AllProducts = () => {
       // console.log("Success:", success);
       // console.log("Message:", msg);
       dispatch(getAdminProductaction())
-    },[dispatch,error,deleteerror,success,msg]);
+    },[dispatch,error,deleteerror,success,msg,nav]);
   
 
     //rows and columns of datagrid material ui 

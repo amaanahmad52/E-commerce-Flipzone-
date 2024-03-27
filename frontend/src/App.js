@@ -1,7 +1,7 @@
 
 import './App.css';
 
-import {BrowserRouter ,Routes,Route,Navigate} from "react-router-dom";
+import {BrowserRouter ,Routes,Route} from "react-router-dom";
 import { useEffect, useState } from 'react';
 import Webfont from "webfontloader"
 import Header from './components/design/Header/Header';
@@ -14,7 +14,7 @@ import ParticularProduct from './components/Product/ParticularProduct';
 import Search from './components/Product/Search';
 import LoginSignUp from './components/user/LoginSignUp';
 import Account from './components/user/Account';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import UserOptions from "./components/user/UserOptions"
 import UpdateProfile from './components/user/UpdateProfile';
 import ResetPassword from './components/user/ResetPassword';
@@ -24,7 +24,7 @@ import Cart from "./components/Cart/Cart"
 import Shipping from './components/Cart/Shipping';
 import axios from "axios"
 import { loadUser } from './actions/userAction';
-import Checkout from './components/Cart/Checkout';
+
 import ConfirmOrder from './components/Cart/ConfirmOrder';
 import Payment from './components/Cart/Payment';
 import { Elements } from '@stripe/react-stripe-js';
@@ -53,8 +53,8 @@ import NotFound from "./components/NotFound"
 
 function App() {
   //now if user is autheticated then a  speed dialer will appear
-  const dispatch =useDispatch()
-  const {isAuthenticated,user,loading}=useSelector((state)=>state.users)  //<---------------------------
+  // const dispatch =useDispatch()
+  const {isAuthenticated,user}=useSelector((state)=>state.users)  //<---------------------------
    
   //for getting stripe key(i added this at end)
   const[stripeKey,setStripeKey] =useState("")

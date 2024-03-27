@@ -44,7 +44,7 @@ const AllOrders = () => {
    // console.log("Success:", success);
    // console.log("Message:", msg);
    dispatch(getAllOrdersAction())
- },[dispatch,error,success,deletesuccess,deleteerror]);
+ },[dispatch,error,success,deletesuccess,deleteerror,nav]);
 
 
 

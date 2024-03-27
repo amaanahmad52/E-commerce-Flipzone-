@@ -19,7 +19,7 @@ const AllProducts = () => {
      const {error,UsersDetails}=useSelector((state)=>state.getAllusers)
      const {error:deleteError,success,message}=useSelector((state)=>state.deleteUser)
     //  console.log(products)
-    const nav=useNavigate()
+    // const nav=useNavigate()
     const handleDelete=(id)=>{
      
       dispatch(UserDeleteByAdminAction(id))

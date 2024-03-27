@@ -1,4 +1,4 @@
-import React, { useEffect, useState,useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Products.css"
 import "./Pagi.css"
 import Spinner from "../Spinner"
@@ -6,12 +6,12 @@ import Featured from '../Home/Featured';
 import TitleData from "../design/TitleData";
 import { useSelector,useDispatch} from "react-redux";
 import { useParams } from 'react-router-dom';
-import { getproduct,clearError } from "../../actions/ProductAction";  //imported the action to call it
+import { getproduct } from "../../actions/ProductAction";  //imported the action to call it
 
 import Pagination from "react-js-pagination";
 import Slider from '@mui/material/Slider';
 import Typography from "@mui/material/Typography"
-import { CallEnd } from '@mui/icons-material';
+
 
 const categories = [
    "Grocery",
@@ -44,7 +44,7 @@ const Products = () => {
   const[category,SetCategory]=useState("");
 
 
-  const{loading,products,errors,productCount,kitnaperpage,filteredProductsCount}=useSelector((s)=>s.products) //product is name of state
+  const{loading,products,productCount,kitnaperpage,filteredProductsCount}=useSelector((s)=>s.products) //product is name of state
   console.log(keyword)
   useEffect(()=>{
     dispatch(getproduct(keyword,currentpage,price,category))

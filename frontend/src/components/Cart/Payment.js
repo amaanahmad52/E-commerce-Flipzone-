@@ -3,7 +3,7 @@ import Checkout from './Checkout'
 import TitleData from '../design/TitleData'
 
 import { Typography } from '@mui/material';
-import { useState } from 'react';
+
 import { useDispatch, useSelector } from 'react-redux'
 import {
    CardNumberElement,
@@ -38,7 +38,7 @@ const Payment = () => {
     itemPrice:orderInfo.subtotal,
     taxPrice:orderInfo.tax,
     totalPrice:orderInfo.totalPrice,
-    shippingPrice:orderInfo. shippingCharges,
+    shippingPrice:orderInfo.shippingCharges,
   }
 
   

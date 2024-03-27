@@ -6,20 +6,20 @@ import TitleData from "../design/TitleData";
 import {useAlert} from "react-alert"
 import { useSelector,useDispatch} from "react-redux";
 import { getproduct } from "../../actions/ProductAction";  //imported the action to call it
-import imm from "../images/landingPhoto.png"
+
 
 
 const Home = () => {
 
   const dispatch=useDispatch()  //this will help to call the desired action
-  const{loading,error,products,productsCount}=useSelector((state)=>state.products)//ye data mil gya store se  (products<-- name whi hai jo combine reducer pe diya tha)
+  const{loading,error,products}=useSelector((state)=>state.products)//ye data mil gya store se  (products<-- name whi hai jo combine reducer pe diya tha)
   const alert=useAlert()
   useEffect(()=>{   
     if(error){
       return alert.error(error) 
     }     
     dispatch(getproduct())
-  },[dispatch,error])
+  },[dispatch,error,alert])
 
 //  console.log("hi")
 //  console.log(products)

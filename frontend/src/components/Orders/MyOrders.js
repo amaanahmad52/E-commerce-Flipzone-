@@ -12,7 +12,7 @@ import {toast} from 'react-toastify';
 const MyOrders = () => {
 
     const dispatch = useDispatch()
-    const {loading,error,orders}=useSelector((S)=>S.myorders)
+    const {error,orders}=useSelector((S)=>S.myorders)
     const {user}=useSelector((S)=>S.users)
     // console.log(orders)
     useEffect(()=>{

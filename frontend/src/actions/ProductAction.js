@@ -7,7 +7,6 @@ import {
   PARTICULAR_PRODUCT_SUCCESS,
   ADMIN_PRODUCT_REQUEST,ADMIN_PRODUCT_SUCCESS,ADMIN_PRODUCT_FAIL, //for getting all products
   NEW_PRODUCT_REQUEST,NEW_PRODUCT_SUCCESS,NEW_PRODUCT_FAIL,
-  NEW_PRODUCT_RESET,
   PRODUCT_DELETE_REQUEST,PRODUCT_DELETE_SUCCESS,PRODUCT_DELETE_FAIL,
   PRODUCT_EDIT_REQUEST,PRODUCT_EDIT_SUCCESS,PRODUCT_EDIT_FAIL,
   
@@ -26,7 +25,7 @@ export const getproduct=(keyword="",currentpage=1,price=[0,100000],cateory="")=>
     try {
         dispatch({type:ALL_PRODUCT_REQUEST})  //for loader
         let linkss=`/api/v1/products?keyword=${keyword}&page=${currentpage}&price[gte]=${price[0]}&price[lte]=${price[1]}` //(with filtered mongo query)
-        if(cateory!=""){
+        if(cateory!==""){
           linkss=`/api/v1/products?keyword=${keyword}&page=${currentpage}&price[gte]=${price[0]}&price[lte]=${price[1]}&category=${cateory}`
         }
         const { data } = await axios.get(linkss); //from backend , 

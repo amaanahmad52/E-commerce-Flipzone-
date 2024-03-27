@@ -2,7 +2,7 @@ import React from 'react'
 import WbTwilightIcon from '@mui/icons-material/WbTwilight';
 import TitleData from "./design/TitleData"
 import { Typography } from "@material-ui/core";
-import { Link } from 'react-router-dom';
+
 const About = () => {
   return (
     <>

@@ -37,7 +37,7 @@ const NewProduct = () => {
       dispatch({type:NEW_PRODUCT_RESET})  //dobara wrna product bna nhi skte. kyuki state pe success hai. so again intialize create product state
     }                                     //this will make success=false
    
-  },[dispatch,success,error])
+  },[dispatch,success,error,nav])
    
       const[name,setName]=useState("")
       const[description,setDescription]=useState("")
