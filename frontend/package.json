@@ -17,6 +17,7 @@
     "axios": "^1.4.0",
     "chart.js": "^4.4.1",
     "concurrently": "^8.2.0",
+    "country-state-city": "^3.2.1",
     "flat-carousel": "^0.0.1",
     "node-localstorage": "^3.0.5",
     "overlay-navbar": "^1.2.3",
