@@ -32,18 +32,14 @@ app.use(cookieParser());
 // File upload middleware
 app.use(fileupload());
 
-const path=require('path');
+// const path=require('path');
 
-// app.use(express.static(path.join(__dirname, '../frontend/build')))
 
-// app.get("*",(req,res)=>{
-//     res.sendFile(path.resolve(__dirname, '../frontend/build/index.html'));
-// })
-app.use(express.static(path.join(__dirname, '../frontend/build')));
+// app.use(express.static(path.join(__dirname, '../frontend/build')));
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
-});
+// app.get('/', function (req, res) {
+//   res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+// });
 
 // Mounting routes
 app.use('/api/v1', require('./routes/ProductsRoute'));
